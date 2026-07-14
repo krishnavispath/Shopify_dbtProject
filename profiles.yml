@@ -1,0 +1,13 @@
+shopify_enterprise:
+  outputs:
+    dev:
+      account: WGOQWYZ-JC81244
+      database: SHOPIFY_ECOMMERCE
+      password: Training123456$
+      role: ACCOUNTADMIN
+      schema: shopify_target
+      threads: 2
+      type: snowflake
+      user: june2026learn
+      warehouse: LARGE_WH
+  target: dev
