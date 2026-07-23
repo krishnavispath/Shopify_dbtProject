@@ -11,3 +11,4 @@ sources:
       - name: transactions
       - name: balance_transactions
       - name: fulfillments
+      - name: order_line_items

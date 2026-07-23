@@ -1,0 +1,40 @@
+version: 2
+
+models:
+   - name: dim_customers
+     description: One row per unique customer.
+
+     config:
+        contract:
+          enforce: true
+
+     columns:
+       - name: customer_key
+         description: Surrogate key generated from the customer ID.
+         data_tests:
+           - not_null
+           - unique
+
+       - name: customer_id
+         description: The unique identifier for the customer.
+         data_tests:
+           - not_null
+           - unique
+       - name: email
+         description: The email address of the customer.
+         data_tests:
+           - unique
+       - name: state
+         description: The state whether the customer is enabled or not.
+         data_tests:
+           - accepted_values:
+               values: ['enabled', 'disabled']
+       - name: accepts_marketing
+         description: Whether the customer has accepted marketing communications.
+         data_tests:
+           - accepted_values:
+               values: ['TRUE', 'FALSE']
+       - name: phone
+         description: The phone number of the customer.
+         data_tests:
+           - unique
