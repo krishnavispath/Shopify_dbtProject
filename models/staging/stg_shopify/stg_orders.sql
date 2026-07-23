@@ -5,6 +5,8 @@
 select 
     order_id,
     contact_email,
+    channel_id,
+    channel_name,
     payment_terms,
     total_tax_set,
     checkout_token,

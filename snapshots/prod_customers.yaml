@@ -1,0 +1,19 @@
+version: 2
+
+snapshots:
+  - name: snap_customers
+    relation: ref('stg_customers')
+    config:
+      schema: snapshots
+      unique_key: customer_id
+      strategy: timestamp
+      updated_at: created_at
+        
+
+  - name: snap_products
+    relation: ref('stg_products')
+    config:
+      schema: snapshots
+      unique_key: product_id
+      strategy: timestamp
+      updated_at: updated_at
